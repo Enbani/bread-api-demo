@@ -1,6 +1,7 @@
 const axios = require('axios');
 const config = require('./config.js');
 
+// configure data object to be sent to BREAD API
 let data = {
   options: {
     callbackUrl: 'https://getbread.com',
@@ -48,6 +49,7 @@ let data = {
   }
 };
 
+// POST request to BREAD API
 axios.request({
   url: 'https://api-sandbox.getbread.com/carts/',
   method: 'post',
@@ -58,5 +60,5 @@ axios.request({
   },
   data
 })
-.then((res) => console.log(res.data))
+.then((res) => console.log(res.data.url))
 .catch((e) => console.log(e.data))

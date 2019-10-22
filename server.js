@@ -27,7 +27,6 @@ app.get('*', (req, res) => {
 // route handler to return tax info
 app.post('/tax', (req, res) => {
   let data = _.pick(req.body, ['shippingAddress', 'total']);
-  console.log(data.shippingAddress)
   if (data.shippingAddress == null || data.total == null) {
     return res.status(400).send({error: 'Please make sure to include a shipping address and total'});
   }
@@ -41,7 +40,6 @@ app.post('/tax', (req, res) => {
 
 // route handler to return shipping options
 app.post('/shipping', (req, res) => {
-  console.log('Shipping request: ', req.body);
   let data = _.pick(req.body, ['shippingAddress', 'total']);
   if (data.shippingAddress == null || data.total == null) {
     return res.status(400).send({error: 'Please make sure to include a shipping address and total'});

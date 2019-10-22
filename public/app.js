@@ -1,3 +1,4 @@
+// configure opts
 var opts = {
   buttonId: 'bread-checkout-btn',
   actAsLabel: false,
@@ -12,6 +13,7 @@ var opts = {
   }]
 };
 
+// calculateTax function should make a server request which returns tax info
 opts.calculateTax = function(shippingContact, billingContact, callback) {
   var postData = {
     shippingAddress: shippingContact,
@@ -27,6 +29,7 @@ opts.calculateTax = function(shippingContact, billingContact, callback) {
     });
 };
 
+// calculateShipping function should make a server request which returns shipping options
 opts.calculateShipping = function(shippingContact, callback){
   var postData = {
     shippingAddress: shippingContact,
@@ -41,6 +44,7 @@ opts.calculateShipping = function(shippingContact, callback){
     });
 };
 
+// logic when a customer exits checkout flow before confirmation
 opts.onCustomerClose = function(err, customer) {
   if (err !== null) {
     console.error("An error occurred getting customer close data.");
@@ -77,6 +81,7 @@ opts.onCustomerClose = function(err, customer) {
   }
 };
 
+// custom styling for checkout button
 opts.customCSS = '@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#303030;color:#eb0e0e;border-radius:6px;display:table-cell;font-family:Roboto,sans-serif;font-size:16px;text-align:center;vertical-align:middle;transition:all .3s ease}.bread-btn{cursor:pointer}#bread-button.bread-btn:hover{background:#575757}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:"i";cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:"Pay Over Time"}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:"As low as "}.bread-for:before{content:"For "}';
 
 bread.checkout(opts);
