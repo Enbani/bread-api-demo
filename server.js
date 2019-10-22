@@ -15,6 +15,10 @@ app.use(bodyParser.json());
 // serve static files from the public directory
 app.use(express.static(__dirname + '/public'));
 
+app.get('/cart', (req, res) => {
+  res.sendFile(path.join(__dirname + '/public/premade-cart.html'));
+})
+
 // all get requests will return the main html page
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/main.html'))
@@ -23,6 +27,7 @@ app.get('*', (req, res) => {
 // route handler to return tax info
 app.post('/tax', (req, res) => {
   let data = _.pick(req.body, ['shippingAddress', 'total']);
+  console.log(data.shippingAddress)
   if (data.shippingAddress == null || data.total == null) {
     return res.status(400).send({error: 'Please make sure to include a shipping address and total'});
   }
