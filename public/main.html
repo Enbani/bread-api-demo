@@ -6,35 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BREAD API DEMO</title>
     <link rel='stylesheet' href='main.css'/>
-    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
+    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="21c10a38-7eb2-4478-83e0-ce9a4fed3efe"></script>
+     <!-- <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="c8ba07bf-0fc7-4311-8d34-83c25eddca99"></script> -->
+     <!-- <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="1bd3a020-5bcc-4d8b-99f0-fbbd31ce8a16"></script> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
     <div class="page">
-
-      <div class="card-container">
-        <div class="card-title">
-          <h2>Comfy Bed!</h2>
-        </div>
-        <div class="card-image card-contents">
-          <img src="https://images.pexels.com/photos/271897/pexels-photo-271897.jpeg?cs=srgb&dl=bed-bedroom-blur-271897.jpg&fm=jpg" alt="it's a basic bed image"  style="max-width:30vw">
-        </div>
-        <div class="card-description card-contents">
-          <h4>Product Description:</h4>
-          <br>
-          <p>It's finally here! The world's comfiest bed! This state of the art sleeping device is so plush, you'll never want to leave its comfort! See if you qualify for financing by clicking the button below.</p>
-        </div>
-
-        <div class="card-button card-contents">
-          <form id="bread-checkout-form" action="/confirm" method="post">
-            <!--put a loading icon in here if time permits-->
-            <div id="bread-checkout-btn" data-bread-default-size="true"></div>
-            <script src="app.js">
-            </script>
-          </form>
-        </div>
-      </div>
+      <div id="bread-checkout-btn" class="bread-class"></div>
+      <div class="splitpay-clickable-price"></div>
+      <!-- <div class="bread-promo" data-custom="true" data-button-location="financing"><div>GET MY RATE</div></div> -->
+      <!-- <div id='bread-checkout-btn'></div> -->
+      <script src="app.js"></script>
 
     </div>
   </body>

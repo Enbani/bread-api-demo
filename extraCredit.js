@@ -37,26 +37,40 @@ let data = {
       state: 'NY',
       zip: '10901'
     },
-    items: [{
-      name: 'Couch',
-      price: 10000,
-      sku: 'COUCH123',
-      imageUrl: 'https://cdn.onlinewebfonts.com/svg/img_571249.png',
-      detailUrl: 'https://cdn.onlinewebfonts.com/svg/img_571249.png',
-      quantity: 1
-    }],
+    customTotal: 500000,
+    // items: [{
+    //   name: 'Couch',
+    //   price: 10000,
+    //   sku: 'COUCH123',
+    //   imageUrl: 'https://cdn.onlinewebfonts.com/svg/img_571249.png',
+    //   detailUrl: 'https://cdn.onlinewebfonts.com/svg/img_571249.png',
+    //   quantity: 1
+    // }],
     tax: 500
   }
 };
 
 // POST request to BREAD API
+// axios.request({
+//   url: 'https://api-sandbox.getbread.com/carts/',
+//   method: 'post',
+//   headers: {"Content-Type": "application/json"},
+//   auth: {
+//     username: config.api.sandboxApiKey,
+//     password: config.api.sandboxSecretKey
+//   },
+//   data
+// })
+// .then((res) => console.log(res.data.url))
+// .catch((e) => console.log(e.data))
+
 axios.request({
   url: 'https://api-sandbox.getbread.com/carts/',
   method: 'post',
   headers: {"Content-Type": "application/json"},
   auth: {
-    username: config.api.sandboxApiKey,
-    password: config.api.sandboxSecretKey
+    username: '7101ea30-8ae3-47ab-a8bd-235860d36f3e',
+    password: 'd0dac82c-7d59-4f95-8390-76a60d9f6b8a'
   },
   data
 })

@@ -4,8 +4,22 @@
   box-sizing: border-box;
 }
 
+.bread-class {
+  width: 95vw;
+  height: 95vh;
+  border: 1px solid red;
+}
+
+.checkout-wrapper {
+  border: 1px solid blue;
+}
+
+.f6 {
+  color: #fff;
+}
+
 .page {
-  background-color: #fff;
+  /* background-color: #000; */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -48,3 +62,9 @@
   align-items: center;
   justify-content: center;
 }
+
+/* @media only screen and (max-width: 768px) {
+ #bread-class {
+     width: 300px;
+ }
+} */

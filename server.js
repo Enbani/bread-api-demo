@@ -59,6 +59,10 @@ app.post('/shipping', (req, res) => {
   return res.send({shippingOptions});
 })
 
+app.post('/add-to-cart', (req, res) => {
+  return res.send({status: 'success'})
+});
+
 // page to return when confirmation is received
 app.post('/confirm', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/confirm.html'));
