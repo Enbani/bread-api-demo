@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BREAD API DEMO</title>
+    <script src="https://connect-preview.breadpayments.com/sdk.js" ></script>
+
+  </head>
+
+  <body>
+    <style>
+      #placement1 a {
+        font-weight: bolder;
+      }
+
+      #placement1 a:before {
+        content: 'Financing '
+      }
+    </style>
+    <div id='placement1'>Placeholder</div>
+    <script>
+      window.BreadPayments.setup({
+        integrationKey: '916d88ca-a16c-4004-9dbe-e1ac3cc2d5b8'
+      });
+
+      window.BreadPayments.registerPlacements([{
+        allowCheckout: false,
+        domID: 'placement1'
+        // order: {
+        //   currency: 'USD',
+        //   items: [{
+        //     name: 'Cannondale x1200 bike',
+        //     quantity: 1,
+        //     shippingCost: {
+        //         value: 10000,
+        //         currency: 'USD'
+        //     },
+        //     unitTax: {
+        //         value: 10000,
+        //         currency: 'USD'
+        //     },
+        //     unitPrice: {
+        //         currency: 'USD',
+        //         value: 129000,
+        //     }
+        //   }],
+        //   subTotal: {
+        //       value: 129000,
+        //       currency: 'USD'
+        //   },
+        //   totalPrice: {
+        //       value: 149000,
+        //       currency: 'USD'
+        //   },
+        //   totalDiscounts: {
+        //       value: 0,
+        //       currency: 'USD'
+        //   },
+        //   totalShipping: {
+        //       value: 10000,
+        //       currency: 'USD'
+        //   },
+        //   totalTax: {
+        //       value: 10000,
+        //       currency: 'USD'
+        //   }
+        // }
+      }])
+
+      window.BreadPayments.on('INSTALLMENT:APPLICATION_DECISIONED', (applicationResult) => console.log(applicationResult)); //required
+      window.BreadPayments.on('INSTALLMENT:APPLICATION_CHECKOUT', (applicationResult) => console.log(applicationResult)); //required
+    </script>
+
+
+  </body>
+
+</html>

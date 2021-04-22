@@ -22,6 +22,8 @@ app.get('/cart', (req, res) => {
 // all get requests will return the main html page
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/main.html'))
+  // res.sendFile(path.join(__dirname + '/public/mainv2.html'))
+  // res.sendFile(path.join(__dirname + '/public/mainv3.html'))
 })
 
 // route handler to return tax info
