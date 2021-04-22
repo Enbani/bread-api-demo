@@ -6,35 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BREAD API DEMO</title>
     <link rel='stylesheet' href='main.css'/>
-    <!-- <script src="https://checkout-sandbox.getbread.com/bread.js"></script> -->
-      <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="21c10a38-7eb2-4478-83e0-ce9a4fed3efe"></script>
-<!--
-      <script>
-        var breadScript = document.createElement('script');
-        breadScript.setAttribute('src', 'https://checkout-sandbox.getbread.com/bread.js');
-        breadScript.setAttribute('data-api-key', '21c10a38-7eb2-4478-83e0-ce9a4fed3efe');
-        breadScript.async = true;
-
-        breadScript.onload = callback = function() {
-          var script = document.createElement('script');
-          script.setAttribute('src', 'app.js');
-          script.async = true;
-          document.getElementsByTagName('head')[0].appendChild(script);
-        }
-
-        document.getElementsByTagName('head')[0].appendChild(breadScript);
-      </script> -->
-     <!-- <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="1bd3a020-5bcc-4d8b-99f0-fbbd31ce8a16"></script> -->
+    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="21c10a38-7eb2-4478-83e0-ce9a4fed3efe"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--
+          <script>
+            var breadScript = document.createElement('script');
+            breadScript.setAttribute('src', 'https://checkout-sandbox.getbread.com/bread.js');
+            breadScript.setAttribute('data-api-key', '21c10a38-7eb2-4478-83e0-ce9a4fed3efe');
+            breadScript.async = true;
+
+            breadScript.onload = callback = function() {
+              var script = document.createElement('script');
+              script.setAttribute('src', 'app.js');
+              script.async = true;
+              document.getElementsByTagName('head')[0].appendChild(script);
+            }
+
+            document.getElementsByTagName('head')[0].appendChild(breadScript);
+          </script> -->
+         <!-- <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="1bd3a020-5bcc-4d8b-99f0-fbbd31ce8a16"></script> -->
   </head>
 
   <body>
 
     <div class="page">
-
-      <!-- <small id="bread-checkout-btn" class="bread-class" onclick="breadClick()">hello world</small> -->
-      <!-- <div class="splitpay-clickable-price"></div> -->
-      <!-- <a class="bread-promo" data-custom="true" data-button-location="financing" financing-program-id="1778786f-854b-43f0-b60c-5afcef67c24e"><div>GET MY RATE</div></a> -->
       <div id='bread-checkout-btn' style="width:1000px">Click Me</div>
       <script>
         var opts = {
@@ -47,16 +42,6 @@
           bread.showCheckout(opts);
         })
       </script>
-      <!-- <div id='bread-checkout' style="width:1000px">Click</div> -->
-
-      <!-- <div class="splitpay-clickable-price"></div>
-      <div class="splitpay-clickable-button"></div> -->
-      <!-- <div id='bread-method'></div> -->
-      <!-- <script src="app.js"></script> -->
-
-      <!-- <iframe height="400px" width="100%" src="https://repl.it/@EnbaniMoore/Bread-API-Demo?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> -->
-
-
     </div>
   </body>
 
